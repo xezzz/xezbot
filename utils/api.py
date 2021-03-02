@@ -27,7 +27,7 @@ async def get_bearer_token(bot, client_id, client_secret):
             elif "message" in data:
                 print("Anfrage fehlgeschlagen mit Fehlercode {} und Nachricht {}".format(str(req.status), data["message"]))
             else:
-                print(f"Request failed with status code {req.status}")
+                print(f"Anfrage fehlgeschlagen mit Fehlercode {req.status}")
                 
             if req.status != 200:
                 return
