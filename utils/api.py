@@ -21,11 +21,11 @@ async def get_bearer_token(bot, client_id, client_secret):
             if req.status == 200:
                 pass
             elif req.status == 400 and data.get("message") == "invalid client":
-                print("Invalid Client ID")
+                print("Ungültige Client ID")
             elif req.status == 403 and data.get("message") == "invalid client secret":
                 print("Invalid Client Secret")
             elif "message" in data:
-                print("Request failed with status code {} and error message {}".format(str(req.status), data["message"]))
+                print("Anfrage fehlgeschlagen mit Fehlercode {} und Nachricht {}".format(str(req.status), data["message"]))
             else:
                 print(f"Request failed with status code {req.status}")
                 
